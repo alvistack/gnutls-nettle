@@ -831,6 +831,8 @@ test_aead(const struct nettle_aead *aead,
 	aead->encrypt(ctx, cleartext->length - offset,
 		      data + offset, cleartext->data + offset);
 
+      ASSERT(MEMEQ(cleartext->length, data, ciphertext->data));
+
       if (digest)
 	{
 	  ASSERT (digest->length <= aead->digest_size);
@@ -840,8 +842,6 @@ test_aead(const struct nettle_aead *aead,
 	}
       else
 	ASSERT(!aead->digest);
-
-      ASSERT(MEMEQ(cleartext->length, data, ciphertext->data));
 
       /* decryption */
       if (aead->set_decrypt_key)
@@ -866,13 +866,14 @@ test_aead(const struct nettle_aead *aead,
 	    aead->decrypt(ctx, cleartext->length - offset,
 			  data + offset, data + offset);
 
+	  ASSERT(MEMEQ(cleartext->length, data, cleartext->data));
+
 	  if (digest)
 	    {
 	      memset(buffer, 0, aead->digest_size);
 	      aead->digest(ctx, digest->length, buffer);
 	      ASSERT(MEMEQ(digest->length, buffer, digest->data));
 	    }
-	  ASSERT(MEMEQ(cleartext->length, data, cleartext->data));
 	}
     }
   free(ctx);

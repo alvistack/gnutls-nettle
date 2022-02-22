@@ -14,7 +14,7 @@ AC_CACHE_VAL(lsh_cv_sys_ccpic,[
 	solaris*)	CCPIC="-fPIC" ;;
 	cygwin*)	CCPIC="" ;;
 	mingw32*)	CCPIC="" ;;
-	*)		CCPIC="-fpic" ;;
+	*)		CCPIC="-fPIC" ;;
       esac
     else
       case "$host_os" in

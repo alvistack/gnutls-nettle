@@ -1,0 +1,4 @@
+nettle-bin: copyright-without-copyright-notice
+nettle-bin: initial-upload-closes-no-bugs
+nettle-bin: no-manual-page
+nettle-bin: zero-byte-file-in-doc-directory

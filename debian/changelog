@@ -1,0 +1,5 @@
+nettle (100:3.4.1-1) UNRELEASED; urgency=medium
+
+  * https://gitlab.com/gnutls/nettle/-/tags/nettle_3.4.1_release_20181204
+
+ -- Wong Hoi Sing Edison <hswong3i@pantarei-design.com>  Fri, 04 Nov 2022 16:44:49 +0800

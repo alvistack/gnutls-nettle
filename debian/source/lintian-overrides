@@ -1,0 +1,4 @@
+nettle source: file-without-copyright-information
+nettle source: no-debian-changes
+nettle source: not-binnmuable-any-depends-any
+nettle source: weak-library-dev-dependency

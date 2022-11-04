@@ -1,0 +1,10 @@
+*.substvars
+*debhelper*
+.debhelper
+autoreconf.*
+files
+libhogweed4
+libnettle6
+nettle-bin
+nettle-dev
+tmp
